@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stop SB438 – Protect Florida Small Businesses and Hemp Consumers</title>
+     <style>
+         body { font-family: Arial, sans-serif; margin: 20px; }
+         .message { margin-bottom: 20px; }
+         .button { 
+             margin: 10px 0; 
+             padding: 10px 20px; 
+             font-size: 16px; 
+             cursor: pointer; 
+         }
+     </style>
+ </head>
+ <body>
+     <div class="message">
+         <h2>Stop SB438 – Protect Florida Small Businesses and Hemp Consumers</h2>
+     </div>
+     <button class="button" onclick="sendEmail('owners')">Open Email- CLICK HERE</button><br>
+   
+ 
+     <script>
+         function sendEmail(role) {
+             const email = 'stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com,stopmnflavorban@gmail.com';
+             const bcc = 'stopmnflavorban@gmail.com';
+             const subject = encodeURIComponent('Stop SB438 – Protect Florida Small Businesses and Hemp Consumers');
+             let body;
+ 
+             if (role === 'owners') {
+                 body = encodeURIComponent('I’m writing to urge you to vote NO on SB 438 and HB 1597. These bills would effectively ban federally legal hemp-derived products in Florida,\n hurting thousands of small businesses, farmers, and everyday people like me who rely on these products. I support safe, responsible regulation\n — but these bills go too far and seem designed to protect large corporate interests rather than the people you represent.\nPlease stand up for your constituents and Florida’s small business community by rejecting SB 438 and HB 1597');
+             } else if (role === 'employees') {
+                 body = encodeURIComponent('As a Minnesota taxpayer, voter, and an employee in the industry this bill targets, I am submitting this testimony in Opposition to HF 2177.');
+             } else if (role === 'consumers') {
+                 body = encodeURIComponent('As a Minnesota voter, taxpayer, and a concerned citizen, I am submitting this testimony in opposition to HF 2177.');
+             }
+ 
+             window.location.href = `mailto:${email}?bcc=${bcc}&subject=${subject}&body=${body}`;
+         }
+     </script>
+ </body>
+ </html>
